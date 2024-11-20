@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+
+    <main id="admin-content">
+      <!-- Login form -->
+      <div id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Username" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        <div id="login-error" class="error"></div>
+      </div>
+
+      <!-- Admin dashboard -->
+      <div id="dashboard-section" style="display: none;">
+        <h2>Manage Quiz Questions</h2>
+
+        <!-- Add Question Form -->
+        <form id="add-question-form">
+          <input type="text" id="question" placeholder="Question" required>
+          <input type="text" id="option1" placeholder="Option 1" required>
+          <input type="text" id="option2" placeholder="Option 2" required>
+          <input type="text" id="option3" placeholder="Option 3" required>
+          <input type="text" id="option4" placeholder="Option 4" required>
+          <input type="number" id="correct" placeholder="Correct Option (0-3)" min="0" max="3" required>
+          <button type="submit">Add Question</button>
+        </form>
+        <div id="form-error" class="error"></div>
+
+        <!-- Questions Table -->
+        <table id="questions-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Question</th>
+              <th>Options</th>
+              <th>Correct Answer</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
